@@ -10,10 +10,3 @@
 
 </div>
 
-<div align="center">
-
-<h1 style="color:#acf8ad;">Happy Coding !</h1>
-
-</div>
-
-![Firefly](./%20Gif%20and%20Image/Firefly.jpg)
