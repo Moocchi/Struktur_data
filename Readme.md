@@ -1,15 +1,19 @@
 <div align="center">
 
-# This is Readme.md
+<h1 style="color:#e2a754;">This is Readme.md</h1>
 
 </div>
-
-![Link to GIF](https://raw.githubusercontent.com/Moocchi/Struktur_data/main/%20Gif%20and%20Image/Firefly.gif)
 
 <div align="center">
 
-# Happy Coding !
+![Link to GIF](/%20Gif%20and%20Image/Firefly.gif)
 
 </div>
 
-![Firefly](/root/Struktur_data/Gif%20and%20Image/1351545.jpg)
+<div align="center">
+
+<h1 style="color:#acf8ad;">Happy Coding !</h1>
+
+</div>
+
+![Firefly](./%20Gif%20and%20Image/Firefly.jpg)
