@@ -12,4 +12,4 @@
 
 </div>
 
-![Firefly](/root/Struktur_data/Gif%20and%20Image/1351545.jpg)
+![Firefly](https://github.com/Moocchi/Struktur_data/blob/main/%20Gif%20and%20Image/1351545.jpg)
