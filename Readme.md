@@ -1,3 +1,3 @@
 # This is Readme.md 
 
-![Link to GIF](./Gif/Firefly.gif)
+![Link to GIF](./Gif and Image/Firefly.gif)

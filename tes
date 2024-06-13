@@ -1,0 +1,6 @@
+import os
+import getpass
+
+os.system("cls" if os.name == "nt" else "clear")
+
+getpass.getpass("Press Enter to continue...")
