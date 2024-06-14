@@ -22,6 +22,7 @@ void push(const string &item)
 {
     items.push_back(item);
 }
+```
 
 ### Fungsi `pop`
 
