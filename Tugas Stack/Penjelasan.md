@@ -17,26 +17,6 @@ Variabel anggota items ini bertujuan untuk menyimpan elemen-elemen yang ada dala
 
 Fungsi `push` menambahkan item ke bagian atas stack.
 
-```cpp
-void push(const string &item)
-{
-    items.push_back(item);
-}
-
-
-Berikut adalah penjelasan setiap fungsi beserta kodenya dalam bahasa Indonesia, diformat dalam file Markdown:
-
-markdown
-Copy code
-# Implementasi Stack dalam C++
-
-Program ini mengimplementasikan struktur data stack dan antarmuka berbasis menu untuk berinteraksi dengannya. Berikut adalah penjelasan dari setiap fungsi beserta kodenya.
-
-## Kelas Stack
-
-### Fungsi `push`
-
-Fungsi `push` menambahkan item ke bagian atas stack.
 
 ```cpp
 void push(const string &item)
