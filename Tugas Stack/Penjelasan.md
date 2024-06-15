@@ -17,7 +17,10 @@ Variabel anggota items ini bertujuan untuk menyimpan elemen-elemen yang ada dala
 
 Fungsi `push` menambahkan item ke bagian atas stack.
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f259f9336f056939ab30b9e2bc920f680615b0a3
 ```cpp
 void push(const string &item)
 {
