@@ -17,10 +17,6 @@ Variabel anggota items ini bertujuan untuk menyimpan elemen-elemen yang ada dala
 
 Fungsi `push` menambahkan item ke bagian atas stack.
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f259f9336f056939ab30b9e2bc920f680615b0a3
 ```cpp
 void push(const string &item)
 {
@@ -47,9 +43,9 @@ string pop()
         }
     }
 ```
-Fungsi pop ini digunakan untuk menghapus elemen dari bagian atas stack. Pertama, fungsi ini memeriksa apakah stack kosong atau tidak dengan memanggil fungsi is_empty(). Jika stack tidak kosong, fungsi ini akan mengambil elemen terakhir dari vektor items dan menghapusnya dari vektor dengan menggunakan fungsi pop_back(). Kemudian, fungsi ini mengembalikan elemen yang baru saja dihapus.
+Fungsi pop ini digunakan untuk menghapus elemen dari bagian atas stack. Pertama, fungsi ini memeriksa apakah stack kosong atau tidak dengan memanggil fungsi `is_empty()`. Jika stack tidak kosong, fungsi ini akan mengambil elemen terakhir dari vektor items dan menghapusnya dari vektor dengan menggunakan fungsi `pop_back()`. Kemudian, fungsi ini mengembalikan elemen yang baru saja dihapus.
 
-Namun, jika stack kosong (yaitu, jika is_empty() mengembalikan true), fungsi ini akan mengembalikan string "Tumpukan kosong". Ini berarti bahwa tidak ada elemen yang bisa dihapus dari stack karena stack sudah kosong.
+Namun, jika stack kosong yaitu, jika `is_empty()` mengembalikan `true`, fungsi ini akan mengembalikan string `"Tumpukan kosong"`. Ini berarti bahwa tidak ada elemen yang bisa dihapus dari stack karena stack sudah kosong.
 
 ### Fungsi `Peek`
 ```cpp
