@@ -231,3 +231,9 @@ Jika pengguna memasukkan pilihan yang tidak valid, program akan menampilkan pesa
 ![Link to GIF](/%20Gif%20and%20Image/lolk.gif)
 
 </div>
+
+<div align="center">
+
+![Link to GIF](/%20Gif%20and%20Image/iqbal.png)
+
+</div>
