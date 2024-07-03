@@ -87,8 +87,7 @@ int main()
             tumpukan_buku.push(buku);
             system("clear");
             cout << "Buku " << buku << " ditambahkan ke tumpukan.\n";
-            printf("Press Enter to continue...");
-            getchar();
+            system("read -p 'Press Enter to continue...' var");
         }
         else if (choice == "2")
         {
