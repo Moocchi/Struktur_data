@@ -3,7 +3,7 @@ version: '3'
 services:
   mysql_cpp:
     image: mariadb:10.2
-    container_name: mysql_cpp
+    container_name: mysql_strukdat
     restart: unless-stopped
     tty: true
     ports:

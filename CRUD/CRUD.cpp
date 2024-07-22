@@ -1,32 +1,32 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <cstdlib> 
-#include <limits>  
+#include <cstdlib>
+#include <limits>
 
 using namespace std;
 
-
 void login_menu();
 void main_menu();
-
 
 vector<string> user_name;
 vector<string> password;
 vector<int> wrong_attempts;
 vector<struct Menu> menus;
 
-struct Menu {
+struct Menu
+{
     string nama;
     int harga;
 };
 
-void clear_screen() {
+void clear_screen()
+{
     system("clear");
 }
 
-
-void register_user() {
+void register_user()
+{
     clear_screen();
     cout << "Register\n\n";
     string username, pass;
@@ -43,8 +43,8 @@ void register_user() {
     cin.get();
 }
 
-
-bool login_user() {
+bool login_user()
+{
     clear_screen();
     cout << "Login\n\n";
     string username, pass;
@@ -53,9 +53,12 @@ bool login_user() {
     cout << "Masukkan password: ";
     cin >> pass;
 
-    for (size_t i = 0; i < user_name.size(); ++i) {
-        if (username == user_name[i]) {
-            if (pass == password[i]) {
+    for (size_t i = 0; i < user_name.size(); ++i)
+    {
+        if (username == user_name[i])
+        {
+            if (pass == password[i])
+            {
                 clear_screen();
                 cout << "\nLogin Berhasil\n";
                 cout << "\nSelamat datang, " << username << " !!!\n";
@@ -64,16 +67,21 @@ bool login_user() {
                 cin.get();
                 wrong_attempts[i] = 0;
                 return true;
-            } else {
+            }
+            else
+            {
                 wrong_attempts[i]++;
-                if (wrong_attempts[i] >= 3) {
+                if (wrong_attempts[i] >= 3)
+                {
                     clear_screen();
                     cout << "Anda telah mencoba login dengan password yang salah sebanyak 3 kali. Akun Anda diblokir.\n";
                     cin.ignore(numeric_limits<streamsize>::max(), '\n');
                     cout << "Tekan Enter untuk melanjutkan...";
                     cin.get();
                     exit(0);
-                } else {
+                }
+                else
+                {
                     clear_screen();
                     cout << "Password Salah\n";
                     cout << "Anda telah mencoba login dengan password yang salah sebanyak " << wrong_attempts[i] << " kali\n";
@@ -94,8 +102,8 @@ bool login_user() {
     return false;
 }
 
-
-void buat_menu() {
+void buat_menu()
+{
     clear_screen();
     cout << "Buat Menu\n\n";
     Menu menu;
@@ -111,38 +119,46 @@ void buat_menu() {
     cin.get();
 }
 
-
-void lihat_menu() {
+void lihat_menu()
+{
     clear_screen();
     cout << "Lihat Menu\n\n";
-    if (menus.empty()) {
+    if (menus.empty())
+    {
         cout << "Tidak ada menu.\n";
-    } else {
-        for (size_t i = 0; i < menus.size(); ++i) {
+    }
+    else
+    {
+        for (size_t i = 0; i < menus.size(); ++i)
+        {
             cout << i + 1 << ". " << menus[i].nama << " - Rp" << menus[i].harga << endl;
         }
     }
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 }
 
-
-void update_menu() {
+void update_menu()
+{
     clear_screen();
     cout << "Update Menu\n\n";
     lihat_menu();
-    if (!menus.empty()) {
+    if (!menus.empty())
+    {
         size_t index;
         cout << "\nMasukkan nomor menu yang ingin diupdate: ";
         cin >> index;
         index--;
-        if (index < menus.size()) {
+        if (index < menus.size())
+        {
             cout << "Masukkan nama menu baru  : ";
             cin.ignore();
             getline(cin, menus[index].nama);
             cout << "Masukkan harga menu baru : ";
             cin >> menus[index].harga;
             cout << "\nMenu berhasil diupdate\n";
-        } else {
+        }
+        else
+        {
             cout << "Menu tidak ditemukan.\n";
         }
     }
@@ -151,19 +167,24 @@ void update_menu() {
     cin.get();
 }
 
-void hapus_menu() {
+void hapus_menu()
+{
     clear_screen();
     cout << "Hapus Menu\n\n";
     lihat_menu();
-    if (!menus.empty()) {
+    if (!menus.empty())
+    {
         size_t index;
         cout << "\nMasukkan nomor menu yang ingin dihapus: ";
         cin >> index;
-        index--; 
-        if (index < menus.size()) {
+        index--;
+        if (index < menus.size())
+        {
             menus.erase(menus.begin() + index);
             cout << "\nMenu berhasil dihapus\n";
-        } else {
+        }
+        else
+        {
             cout << "Menu tidak ditemukan.\n";
         }
     }
@@ -172,9 +193,10 @@ void hapus_menu() {
     cin.get();
 }
 
-
-void main_menu() {
-    while (true) {
+void main_menu()
+{
+    while (true)
+    {
         clear_screen();
         cout << "Warung Makan Q`i-Ron-Jou\n\n";
         cout << "1. Buat Menu\n";
@@ -186,23 +208,36 @@ void main_menu() {
         cout << "\nMasukkan pilihan: ";
         string choice;
         cin >> choice;
-        if (choice == "1") {
+        if (choice == "1")
+        {
             buat_menu();
-        } else if (choice == "2") {
+        }
+        else if (choice == "2")
+        {
             lihat_menu();
             cout << "Tekan Enter untuk melanjutkan...";
             cin.get();
-        } else if (choice == "3") {
+        }
+        else if (choice == "3")
+        {
             update_menu();
-        } else if (choice == "4") {
+        }
+        else if (choice == "4")
+        {
             hapus_menu();
-        } else if (choice == "5") {
+        }
+        else if (choice == "5")
+        {
             login_menu();
-        } else if (choice == "6") {
+        }
+        else if (choice == "6")
+        {
             clear_screen();
             cout << "Q`i-Ron-Jou\n";
             exit(0);
-        } else {
+        }
+        else
+        {
             clear_screen();
             cout << "Pilihan tidak valid. Silakan coba lagi.\n";
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -212,9 +247,10 @@ void main_menu() {
     }
 }
 
-
-void login_menu() {
-    while (true) {
+void login_menu()
+{
+    while (true)
+    {
         clear_screen();
         cout << "Selamat datang di Warung Q`i-Ron-Jou\n\n";
         cout << "1. Register\n";
@@ -223,18 +259,26 @@ void login_menu() {
         cout << "\nMasukkan pilihan: ";
         string choice;
         cin >> choice;
-        if (choice == "1") {
+        if (choice == "1")
+        {
             register_user();
-        } else if (choice == "2") {
-            if (login_user()) {
+        }
+        else if (choice == "2")
+        {
+            if (login_user())
+            {
                 main_menu();
                 break;
             }
-        } else if (choice == "3") {
+        }
+        else if (choice == "3")
+        {
             clear_screen();
             cout << "Q`i-Ron-Jou\n";
             exit(0);
-        } else {
+        }
+        else
+        {
             clear_screen();
             cout << "Pilihan tidak valid. Silakan coba lagi.\n";
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -244,7 +288,8 @@ void login_menu() {
     }
 }
 
-int main() {
+int main()
+{
     login_menu();
     return 0;
 }
